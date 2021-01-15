@@ -1,9 +1,9 @@
-1 CLS :                        
+1 CLS :                       
 COLOR 5, 2
 PRINT "                                                                    "
 PRINT "                                                                    "
 PRINT "                                                                    "
-PRINT "                         Dobrodosli u kviz                          "
+PRINT "                     Dobrodosli u kviz !                            "
 PRINT "                                                                    "
 PRINT "                   ฒฒฒ   ฒฒฒฒ  ฒ   ฒ                                "
 PRINT "                   ฒ  ฒ  ฒ     ฒฒ  ฒ                                "
@@ -33,7 +33,7 @@ LOCATE 11, 13: PRINT "บ                                                 บ"
 LOCATE 12, 13: PRINT "บ                                                 บ"
 LOCATE 13, 13: PRINT "ศอออออออออออออออออออออออออออออออออออออออออออออออออผ"
     
-   COLOR 5, 0
+   COLOR 14, 0
 
 
 50 b = INT(RND * 11) * 10
