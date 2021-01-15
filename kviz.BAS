@@ -1,5 +1,5 @@
-1 CLS :                         
-COLOR 5, 1
+1 CLS :                        
+COLOR 5, 2
 PRINT "                                                                    "
 PRINT "                                                                    "
 PRINT "                                                                    "
@@ -13,8 +13,8 @@ PRINT "                   ฒ ฒ   ฒฒฒฒ  ฒ   ฒ  ฒ  ฒ                          "
 PRINT "                                                                    "
 PRINT "                                                                    "
 PRINT "                                                                    "
- COLOR 11, 0: LOCATE 15, 26: PRINT "Press any key "
- COLOR 11, 0
+ COLOR 5, 0: LOCATE 15, 26: PRINT "Press any key "
+ COLOR 5, 0
 3 g$ = INKEY$
  IF g$ = "" THEN 3
  IF g$ = CHR$(27) THEN SYSTEM
@@ -33,7 +33,7 @@ LOCATE 11, 13: PRINT "บ                                                 บ"
 LOCATE 12, 13: PRINT "บ                                                 บ"
 LOCATE 13, 13: PRINT "ศอออออออออออออออออออออออออออออออออออออออออออออออออผ"
     
-   COLOR 11, 0
+   COLOR 5, 0
 
 
 50 b = INT(RND * 11) * 10
@@ -86,7 +86,7 @@ COLOR 11, 0
 785 IF h$ = "" THEN 780
 790 IF h$ = CHR$(27) THEN SYSTEM
 795 i = VAL(h$)
-796 IF i > 0 AND i = VAL(a$) AND i < 5 THEN GOSUB 2000 ELSE GOSUB 3000
+796 IF i > 0 AND i = VAL(a$) AND i < 5 THEN GOSUB 2000 ELSE GOTO 3000
 
 1310 a$ = INKEY$: IF a$ = "" OR a$ = " " THEN 1310
       IF a$ = "x" OR a$ = "X" THEN CLS
@@ -100,7 +100,7 @@ GOSUB 10100
 
 2000 REM tac
 GOSUB 10100
-COLOR 14, 0: LOCATE 15, 26: PRINT "    TACAN ODGOVOR!             "
+COLOR 2, 0: LOCATE 15, 26: PRINT "    TACAN ODGOVOR!             "
 LOCATE 21, 16: PRINT "Stisni <space> za nastavak ili <esc> za zaustavljanje    "
 COLOR 5, 0
 b = b + 100
@@ -114,17 +114,17 @@ RETURN
 
 3000 REM netac
 GOSUB 10000
-COLOR 14, 0: LOCATE 15, 26: PRINT "   Odgovor nije tacan!          "
+COLOR 4, 0: LOCATE 15, 26: PRINT "   Odgovor nije tacan!          "
 LOCATE 20, 15: PRINT "Osvojeni iznos:", b
 COLOR 14, 0
 FOR dd = 1 TO 33000: NEXT dd
 3310 a$ = INKEY$: IF a$ = "" THEN 3310
-RETURN
+GOTO 1310
 
 10000 REM muzika za dobitak
       PLAY "l32mlmbcdceg"
       RETURN
-10100 REM zvuk 
+10100 REM zvuk
       i = 1
       FOR g = 1 TO 2: z = TIMER: z = z + 510: RANDOMIZE z
 	fe = CINT(390 * RND + 100): fe = ABS(fe)
