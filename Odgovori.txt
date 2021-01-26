@@ -1,0 +1,19 @@
+1.Hong kong,Veking,Tokio,Kavasaki
+2.Vlžir,Maroko,Kairo,Rabad
+3.Venosaries,Brazilija,Surce,Santiego
+4.32,35 p.n.e,24,21 p.n.e,65,62 p.n.e , 98,89 p.n.e
+5.Kuće,Džamije,Kanalizacija,Zgrade
+6.Tučak,Cvijet,Plod,Korijen
+7.Pauk,Muha,Pčela,Komarac.
+8.Plivanju,Skakanju,Trčanju,Pecanju
+9.Povelju kulina bana,De-andminestrando de imperio,Udžbenik za matematiku,Radnu svesku za moju okolinu
+10.Großdis,Hallo,Ćao,Hej
+11.1945,1845,1944,1946
+12.David Bowie,Kurt Cobain,Krist Novoselić,Dave Grolh
+13.Jabuka,Šljiva,Kruška,Naradža
+14.Da,Ne,
+15.Da,Ne
+
+
+
+
