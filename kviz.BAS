@@ -91,14 +91,14 @@ WEND
 
 
 
-1310 a$ = INKEY$: IF a$ = "" OR a$ = " " THEN 1310
-IF a$ = "x" OR a$ = "X" THEN CLS
-COLOR 4, 0
-LOCATE 17, 23: PRINT "          KVIZ 0.03."
-LOCATE 18, 23: PRINT "       Decembar 2020.god  "
-LOCATE 19, 23: PRINT "       < RENN design >"
+1310
+LOCATE 21, 23: PRINT "          KVIZ 0.05."
+LOCATE 22, 23: PRINT "       Decembar 2020.god  "
+LOCATE 23, 23: PRINT "       < RENN design >"
 GOSUB 10100
+FOR dd = 1 TO 3000: NEXT dd
 IF a$ = CHR$(27) THEN SYSTEM
+END
 
 1500 REM pitanje
 1510 COLOR 26, 0: LOCATE 15, 26: PRINT "Konacan odgovor (1 - 4): "
@@ -109,7 +109,8 @@ COLOR 11, 0
 1585 IF h$ = "" THEN 1580
 1590 IF h$ = CHR$(27) THEN SYSTEM
 1595 i = VAL(h$)
-'IF (i > 4 OR h$ <> CHR$(81)) THEN 1580
+IF (i > 4) THEN 1580
+
 IF h$ = CHR$(81) THEN GOTO 1700 ELSE GOTO 1596
 1596 IF i > 0 AND i = VAL(a$) AND i < 5 THEN GOSUB 2000 ELSE GOTO 3000
 RETURN
@@ -155,11 +156,23 @@ RETURN
 3000 REM netac
 GOSUB 10000
 COLOR 4, 0: LOCATE 15, 26: PRINT "   Odgovor nije tacan!          "
-LOCATE 18, 26: PRINT "                            "
-LOCATE 20, 15: PRINT "Osvojeni iznos:", b
+CLS
+
+PRINT "                                                                    "
+PRINT "                                                                    "
+PRINT "                                                                    "
+PRINT "                    Odgovor nije tacan!                             "
+PRINT "                                                                    "
+PRINT "                     ²   ²  ²  ²² ²²²                               "
+PRINT "                     ²   ²  ² ²   ²                                 "
+PRINT "                     ²   ²  ²  ²  ²²²                               "
+PRINT "                     ²   ²  ²   ² ²                                 "
+PRINT "                     ²²²  ²²  ²²  ²²²                               "
+PRINT "                                                                    "
+PRINT "                   Osvojeni iznos: ", b
+
 COLOR 14, 0
-FOR dd = 1 TO 33000: NEXT dd
-3310 v$ = INKEY$: IF v$ = "" THEN 3310
+
 GOTO 1310
 
 10000 REM muzika za dobitak
